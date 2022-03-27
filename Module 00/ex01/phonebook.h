@@ -14,5 +14,20 @@
 #define PHONEBOOK_H
 
 #include <iostream>
+#include <cstring>
+
+class Contacts{
+    public:
+            std::string firstName;
+            std::string lastName;
+            std::string nickName;
+            std::string phoneNumber;
+            std::string darkestSecret;
+};
+
+class PhoneBook{
+    public:
+        Contacts contact[8];
+};
 
 #endif
