@@ -6,7 +6,7 @@
 /*   By: mouassit <mouassit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/03 16:48:57 by mouassit          #+#    #+#             */
-/*   Updated: 2022/04/04 12:31:34 by mouassit         ###   ########.fr       */
+/*   Updated: 2022/04/04 13:13:22 by mouassit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ class Fixed
 {
     private:
         int number;
-        static const int bits;
+        static const int bits = 8;
     public:
         Fixed(void);
         Fixed(Fixed const & number);
