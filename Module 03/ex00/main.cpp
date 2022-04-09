@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mouassit <mouassit@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mustapha <mustapha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 17:20:57 by mouassit          #+#    #+#             */
-/*   Updated: 2022/04/08 17:51:24 by mouassit         ###   ########.fr       */
+/*   Updated: 2022/04/09 01:42:04 by mustapha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 int main()
 {
-    ClapTrap clap("Test");
+    ClapTrap clap("test");
+
     clap.attack("tv");
+    clap.takeDamage(5);
+    clap.beRepaired(8);
 }
