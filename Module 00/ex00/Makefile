@@ -6,7 +6,7 @@
 #    By: mouassit <mouassit@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/22 12:12:08 by mouassit          #+#    #+#              #
-#    Updated: 2022/03/22 12:29:06 by mouassit         ###   ########.fr        #
+#    Updated: 2022/04/09 15:26:20 by mouassit         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ SRC = megaphone.cpp
 all : $(NAME)
 
 $(NAME): $(SRC)
-	@c++ -Wall -Wextra -Werror $(SRC) -o $(NAME)
+	@c++  -Wall -Wextra -Werror -std=c++98 $(SRC) -o $(NAME)
 
 clean:
 	@rm -rf $(NAME)

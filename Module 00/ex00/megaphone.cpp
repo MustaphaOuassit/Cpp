@@ -6,7 +6,7 @@
 /*   By: mouassit <mouassit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/22 12:18:57 by mouassit          #+#    #+#             */
-/*   Updated: 2022/03/22 12:18:59 by mouassit         ###   ########.fr       */
+/*   Updated: 2022/04/09 14:54:57 by mouassit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,5 @@ int	main(int argc, char **argv)
 		std::cout << std::endl;
 	}
 	else
-		std::cout << "LOUD AND UNBEARABLE FEEDBACK NOISE" << std::endl;
+		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
 }

@@ -6,7 +6,7 @@
 #    By: mouassit <mouassit@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/26 16:19:11 by mouassit          #+#    #+#              #
-#    Updated: 2022/03/26 16:21:04 by mouassit         ###   ########.fr        #
+#    Updated: 2022/04/09 15:26:34 by mouassit         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ SRC = phonebook.cpp
 all : $(NAME)
 
 $(NAME): $(SRC)
-	@c++ -Wall -Wextra -Werror $(SRC) -o $(NAME)
+	@c++ -Wall -Wextra -Werror -std=c++98 $(SRC) -o $(NAME)
 
 clean:
 	@rm -rf $(NAME)

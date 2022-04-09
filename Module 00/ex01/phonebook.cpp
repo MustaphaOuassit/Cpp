@@ -6,11 +6,11 @@
 /*   By: mouassit <mouassit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/26 16:21:40 by mouassit          #+#    #+#             */
-/*   Updated: 2022/03/26 18:40:47 by mouassit         ###   ########.fr       */
+/*   Updated: 2022/04/09 15:14:08 by mouassit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "phonebook.h"
+#include "phonebook.hpp"
 
 void    printUser(std::string str)
 {
@@ -22,7 +22,11 @@ void    printUser(std::string str)
             std::cout << str[i];
     }
     else
+    {
+        std::cout << std::setw(10);
+        std::cout<< std::left;
         std::cout << str;
+    }
 }
 
 int main(){
@@ -58,7 +62,7 @@ int main(){
             {
                 if(user.contact[i].firstName.length())
                 {
-                    std::cout << " " << i;
+                    printUser(std::to_string(i));
                     std::cout << "|";
                     printUser(user.contact[i].firstName);
                     std::cout << "|";
