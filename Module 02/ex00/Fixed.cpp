@@ -6,7 +6,7 @@
 /*   By: mouassit <mouassit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/03 17:03:59 by mouassit          #+#    #+#             */
-/*   Updated: 2022/04/04 14:01:09 by mouassit         ###   ########.fr       */
+/*   Updated: 2022/04/10 13:23:52 by mouassit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ Fixed::Fixed(void)
 Fixed::Fixed(Fixed const & number)
 {
     std::cout << "Copy constructor called" << std::endl;
-    this->number = number.number;
+    *this = number;
 }
 
 Fixed::~Fixed(void)
@@ -42,7 +42,7 @@ int    Fixed::getRawBits(void) const
     return (this->number);
 }
 
-void Fix::setRawBits(int const raw)
+void Fixed::setRawBits(int const raw)
 {
 	std::cout << "setRawBits member function called" << std::endl;
     this->number = raw;

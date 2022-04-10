@@ -6,7 +6,7 @@
 #    By: mouassit <mouassit@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/03 16:47:29 by mouassit          #+#    #+#              #
-#    Updated: 2022/04/04 13:20:48 by mouassit         ###   ########.fr        #
+#    Updated: 2022/04/10 13:17:57 by mouassit         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ SRC =  main.cpp\
 all : $(NAME)
 
 $(NAME): $(SRC)
-	@c++ -Wall -Wextra -Werror  $(SRC) -o $(NAME)
+	@c++  -Wall -Wextra -Werror -std=c++98 $(SRC) -o $(NAME)
 
 clean:
 	@rm -rf $(NAME)

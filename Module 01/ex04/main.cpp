@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mustapha <mustapha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mouassit <mouassit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 22:25:40 by mustapha          #+#    #+#             */
-/*   Updated: 2022/03/31 19:30:27 by mustapha         ###   ########.fr       */
+/*   Updated: 2022/04/10 12:13:48 by mouassit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int main(int argc, char **argv)
                 if(str1 != str2)
                 {
                     for(size_t index = 0; (index = input.find(str1)) != std::string::npos; index++)
-                        input = input.erase(index,str1.length()).insert(index,str2);   
+                        input = input.erase(index,str1.length()).insert(index,str2);
                 }
                 createFile << input;
                 if(openFile.peek() == EOF)
