@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mustapha <mustapha@student.42.fr>          +#+  +:+       +#+         #
+#    By: mouassit <mouassit@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/30 12:52:46 by mustapha          #+#    #+#              #
-#    Updated: 2022/03/30 18:51:34 by mustapha         ###   ########.fr        #
+#    Updated: 2022/04/10 10:03:31 by mouassit         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ SRC =  main.cpp\
 all : $(NAME)
 
 $(NAME): $(SRC)
-	@c++  $(SRC) -o $(NAME)
+	@c++  -Wall -Wextra -Werror -std=c++98 $(SRC) -o $(NAME)
 
 clean:
 	@rm -rf $(NAME)

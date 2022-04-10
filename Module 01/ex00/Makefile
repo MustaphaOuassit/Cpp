@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mustapha <mustapha@student.42.fr>          +#+  +:+       +#+         #
+#    By: mouassit <mouassit@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/28 13:51:51 by mustapha          #+#    #+#              #
-#    Updated: 2022/03/28 22:26:26 by mustapha         ###   ########.fr        #
+#    Updated: 2022/04/10 10:03:03 by mouassit         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ SRC =  randomChump.cpp\
 all : $(NAME)
 
 $(NAME): $(SRC)
-	@c++  $(SRC) -o $(NAME)
+	@c++  -Wall -Wextra -Werror -std=c++98 $(SRC) -o $(NAME)
 
 clean:
 	@rm -rf $(NAME)
