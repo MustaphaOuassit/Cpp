@@ -6,7 +6,7 @@
 /*   By: mouassit <mouassit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 18:02:36 by mouassit          #+#    #+#             */
-/*   Updated: 2022/04/08 15:04:53 by mouassit         ###   ########.fr       */
+/*   Updated: 2022/04/10 16:25:42 by mouassit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,11 @@ Fixed::Fixed(const int value)
 Fixed::Fixed(const float value)
 {
     this->number = roundf(value * (1 << this->bits));
+}
+
+Fixed::~Fixed(void)
+{
+    std::cout << "Destructor called" << std::endl;
 }
 
 int    Fixed::getRawBits(void) const
