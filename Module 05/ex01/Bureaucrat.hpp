@@ -6,7 +6,7 @@
 /*   By: mouassit <mouassit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 10:54:21 by mouassit          #+#    #+#             */
-/*   Updated: 2022/04/20 18:12:52 by mouassit         ###   ########.fr       */
+/*   Updated: 2022/04/21 00:49:18 by mouassit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,11 @@ class Bureaucrat
                 }
         };
         class GradeTooLowException : public std::exception {
-            virtual const char *what() const throw()
-            {
-                return ("Bureaucrat::GradeTooLowException");
-            }
+            public:
+                virtual const char *what() const throw()
+                {
+                    return ("Bureaucrat::GradeTooLowException");
+                }
         };
         std::string    getName(void) const;
         int    getGrade(void) const;
