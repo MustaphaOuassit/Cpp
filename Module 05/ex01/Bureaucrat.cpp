@@ -6,7 +6,7 @@
 /*   By: mouassit <mouassit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 10:59:22 by mouassit          #+#    #+#             */
-/*   Updated: 2022/04/22 03:09:24 by mouassit         ###   ########.fr       */
+/*   Updated: 2022/04/22 03:29:03 by mouassit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,8 @@ void    Bureaucrat::signForm(Form& form) const
     }
     catch(std::exception& e)
     {
-        std::cout << this->getName() << " couldn’t sign " << form.getName() << " grade is low.";
+        std::cout << this->getName() << " couldn’t sign " << form.getName() << " grade is low." << std::endl;
+        return;
     }
     std::cout << this->getName() << " signed " << form.getName() << std::endl;
 }
