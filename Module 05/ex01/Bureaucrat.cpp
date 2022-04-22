@@ -6,39 +6,34 @@
 /*   By: mouassit <mouassit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 10:59:22 by mouassit          #+#    #+#             */
-/*   Updated: 2022/04/21 00:22:38 by mouassit         ###   ########.fr       */
+/*   Updated: 2022/04/22 03:09:24 by mouassit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
-Bureaucrat::Bureaucrat(void)
+Bureaucrat::Bureaucrat(void): name("")
 {
     std::cout << "Default Bureaucrat Constractor called" << std::endl;
 }
 
-Bureaucrat::Bureaucrat(const std::string name, int grade)
+Bureaucrat::Bureaucrat(const std::string name, int grade): name(name), grade(grade)
 {
     std::cout << "Bureaucrat Arguments(name,grade) Constractor called" << std::endl;
     if(grade < 1)
         throw Bureaucrat::GradeTooHighException();
     if(grade > 150)
         throw Bureaucrat::GradeTooLowException();
-    this->name = name;
-    this->grade = grade;
 }
 
-Bureaucrat::Bureaucrat(Bureaucrat const & copy)
+Bureaucrat::Bureaucrat(Bureaucrat const & copy):name(copy.getName())
 {
     std::cout << "Bureaucrat Copy Constractor called" << std::endl;
     *this = copy;
 }
 
-Bureaucrat &Bureaucrat::operator=(const Bureaucrat &inst) {
-    this->name = inst.name;
-    this->grade = inst.grade;
-    return *this;
-}
+
 
 Bureaucrat::~Bureaucrat(void)
 {
@@ -69,8 +64,27 @@ int    Bureaucrat::getGrade(void) const
     return this->grade;
 }
 
+Bureaucrat& Bureaucrat::operator=(const Bureaucrat &inst)
+{
+    this->grade = inst.getGrade();
+    return *this;
+}
+
+
 std::ostream&	operator<<(std::ostream& cout, Bureaucrat const & inst)
 {
     cout << inst.getName() << ", bureaucrat " << inst.getGrade() << ".";
     return (cout);
+}
+
+void    Bureaucrat::signForm(Form& form) const
+{
+    try {
+        form.beSigned(*this);
+    }
+    catch(std::exception& e)
+    {
+        std::cout << this->getName() << " couldn’t sign " << form.getName() << " grade is low.";
+    }
+    std::cout << this->getName() << " signed " << form.getName() << std::endl;
 }
