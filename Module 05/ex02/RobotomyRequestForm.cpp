@@ -6,7 +6,7 @@
 /*   By: mouassit <mouassit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 01:34:28 by mouassit          #+#    #+#             */
-/*   Updated: 2022/04/24 03:08:26 by mouassit         ###   ########.fr       */
+/*   Updated: 2022/04/24 05:21:11 by mouassit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,19 @@
 
 RobotomyRequestForm::RobotomyRequestForm(void):AForm("ShrubberyCreationForm", 72, 45)
 {
-    std::cout << "Default RobotomyRequestForm Constractor called" << std::endl;
+    std::cout << "Default RobotomyRequestForm Constructor called" << std::endl;
 }
 
 RobotomyRequestForm::RobotomyRequestForm(RobotomyRequestForm const & copy)
 :AForm(copy),target(copy.getTarget())
 {
-    std::cout << "RobotomyRequestForm Copy Constractor called" << std::endl;
+    std::cout << "RobotomyRequestForm Copy Constructor called" << std::endl;
 }
 
 RobotomyRequestForm::RobotomyRequestForm(const std::string &target)
 :AForm("RobotomyRequestForm", 72, 45), target(target)
 {
-    std::cout << "RobotomyRequestForm Arguments(target) Constractor called" << std::endl;
+    std::cout << "RobotomyRequestForm Arguments(target) Constructor called" << std::endl;
 }
 RobotomyRequestForm &RobotomyRequestForm::operator=(const RobotomyRequestForm &inst) {
    AForm::operator=(inst);

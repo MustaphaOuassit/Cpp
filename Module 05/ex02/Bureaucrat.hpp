@@ -6,7 +6,7 @@
 /*   By: mouassit <mouassit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 10:54:21 by mouassit          #+#    #+#             */
-/*   Updated: 2022/04/23 17:40:44 by mouassit         ###   ########.fr       */
+/*   Updated: 2022/04/24 03:36:08 by mouassit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ class Bureaucrat
         std::string    getName(void) const;
         int    getGrade(void) const;
         void   signForm(AForm& form) const;
+        void   executeForm(AForm const & form);
         private:
             std::string const name;
             int grade;

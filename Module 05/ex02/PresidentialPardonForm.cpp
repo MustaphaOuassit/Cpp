@@ -6,7 +6,7 @@
 /*   By: mouassit <mouassit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 03:09:47 by mouassit          #+#    #+#             */
-/*   Updated: 2022/04/24 03:16:16 by mouassit         ###   ########.fr       */
+/*   Updated: 2022/04/24 05:21:11 by mouassit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,19 @@
 
 PresidentialPardonForm::PresidentialPardonForm(void):AForm("ShrubberyCreationForm", 25, 5)
 {
-    std::cout << "Default PresidentialPardonForm Constractor called" << std::endl;
+    std::cout << "Default PresidentialPardonForm Constructor called" << std::endl;
 }
 
 PresidentialPardonForm::PresidentialPardonForm(PresidentialPardonForm const & copy)
 :AForm(copy),target(copy.getTarget())
 {
-    std::cout << "PresidentialPardonForm Copy Constractor called" << std::endl;
+    std::cout << "PresidentialPardonForm Copy Constructor called" << std::endl;
 }
 
 PresidentialPardonForm::PresidentialPardonForm(const std::string &target)
 :AForm("PresidentialPardonForm", 25, 5), target(target)
 {
-    std::cout << "PresidentialPardonForm Arguments(target) Constractor called" << std::endl;
+    std::cout << "PresidentialPardonForm Arguments(target) Constructor called" << std::endl;
 }
 PresidentialPardonForm &PresidentialPardonForm::operator=(const PresidentialPardonForm &inst) {
    AForm::operator=(inst);

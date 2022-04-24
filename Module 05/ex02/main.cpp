@@ -6,7 +6,7 @@
 /*   By: mouassit <mouassit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 22:25:53 by mouassit          #+#    #+#             */
-/*   Updated: 2022/04/24 01:43:09 by mouassit         ###   ########.fr       */
+/*   Updated: 2022/04/24 05:23:05 by mouassit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,19 @@
 #include "AForm.hpp"
 #include "ShrubberyCreationForm.hpp"
 #include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
 
-int main() {
-    Bureaucrat a("test",1);
-    
-    RobotomyRequestForm t("target");
-    t.execute(a);
+int	main(void)
+{
+    Bureaucrat bureaucrat ("test", 140);
+    ShrubberyCreationForm shrubbery("home");
+
+    try {
+        bureaucrat.executeForm(shrubbery);
+    }
+    catch (std::exception &e) {
+        std::cout << e.what() << std::endl;
+    }
+
+    return (0);
 }

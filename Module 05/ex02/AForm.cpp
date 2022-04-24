@@ -6,7 +6,7 @@
 /*   By: mouassit <mouassit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 17:36:31 by mouassit          #+#    #+#             */
-/*   Updated: 2022/04/23 23:38:41 by mouassit         ###   ########.fr       */
+/*   Updated: 2022/04/24 05:21:11 by mouassit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 AForm::AForm(void): name(""), isSigned(false), signGrade(150), executeGrade(150)
 {
-    std::cout << "Default AForm Constractor called" << std::endl;
+    std::cout << "Default AForm Constructor called" << std::endl;
 }
 
 AForm::AForm(AForm const & copy): name(""), isSigned(false), signGrade(150), executeGrade(150)
 {
-    std::cout << "AForm Copy Constractor called" << std::endl;
+    std::cout << "AForm Copy Constructor called" << std::endl;
     *this = copy;
 }
 AForm::AForm(std::string const name, int const signGrade, int const executeGrade)
 : name(name), isSigned(false), signGrade(signGrade), executeGrade(executeGrade)
 {
-    std::cout << "AForm Arguments(name,signGrade,executeGrade) Constractor called" << std::endl;
+    std::cout << "AForm Arguments(name,signGrade,executeGrade) Constructor called" << std::endl;
     if(signGrade < 1 || executeGrade < 1)
         throw AForm::GradeTooHighException();
     if(signGrade > 150 || executeGrade > 150)
