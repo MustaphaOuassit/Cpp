@@ -6,13 +6,13 @@
 /*   By: mouassit <mouassit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 17:22:08 by mouassit          #+#    #+#             */
-/*   Updated: 2022/04/24 00:22:44 by mouassit         ###   ########.fr       */
+/*   Updated: 2022/04/24 01:39:27 by mouassit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ShrubberyCreationForm.hpp"
 
-ShrubberyCreationForm::ShrubberyCreationForm(void): AForm(), target("")
+ShrubberyCreationForm::ShrubberyCreationForm(void):AForm("ShrubberyCreationForm", 145, 137)
 {
     std::cout << "Default ShrubberyCreationForm Constractor called" << std::endl;
 }
