@@ -6,7 +6,7 @@
 /*   By: mouassit <mouassit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 17:22:08 by mouassit          #+#    #+#             */
-/*   Updated: 2022/04/24 05:21:11 by mouassit         ###   ########.fr       */
+/*   Updated: 2022/04/24 17:36:00 by mouassit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,14 +40,8 @@ ShrubberyCreationForm::~ShrubberyCreationForm(void)
 
 void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 {
-    try{
-        checkExecute(executor);
-    }
-    catch(std::exception & e) {
-        throw;
-    }
+    checkExecute(executor);
     std::ofstream file;
-    
     file.open(((this->target) + "_shrubbery"));
     file << "       ###" << std::endl;
     file << "      #o###" << std::endl;

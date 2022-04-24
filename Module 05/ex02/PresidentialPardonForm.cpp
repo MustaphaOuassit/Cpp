@@ -6,7 +6,7 @@
 /*   By: mouassit <mouassit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 03:09:47 by mouassit          #+#    #+#             */
-/*   Updated: 2022/04/24 05:21:11 by mouassit         ###   ########.fr       */
+/*   Updated: 2022/04/24 17:28:12 by mouassit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,12 +40,7 @@ PresidentialPardonForm::~PresidentialPardonForm(void)
 
 void PresidentialPardonForm::execute(Bureaucrat const & executor) const
 {
-    try{
-        checkExecute(executor);
-    }
-    catch(std::exception & e) {
-        throw;
-    }
+    checkExecute(executor);
     std::cout << this->target << " has been pardoned by Zaphod Beeblebrox." << std::endl;
 }
 

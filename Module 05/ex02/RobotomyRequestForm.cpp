@@ -6,7 +6,7 @@
 /*   By: mouassit <mouassit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 01:34:28 by mouassit          #+#    #+#             */
-/*   Updated: 2022/04/24 05:21:11 by mouassit         ###   ########.fr       */
+/*   Updated: 2022/04/24 17:27:55 by mouassit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,12 +40,7 @@ RobotomyRequestForm::~RobotomyRequestForm(void)
 
 void RobotomyRequestForm::execute(Bureaucrat const & executor) const
 {
-    try{
-        checkExecute(executor);
-    }
-    catch(std::exception & e) {
-        throw;
-    }
+    checkExecute(executor);
     if ((time(0) % 2) == 0)
         std::cout << this->target << " has been robotomized successfully 50% of the time." << std::endl;
     else

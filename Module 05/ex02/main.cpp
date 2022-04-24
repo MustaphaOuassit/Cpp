@@ -6,7 +6,7 @@
 /*   By: mouassit <mouassit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 22:25:53 by mouassit          #+#    #+#             */
-/*   Updated: 2022/04/24 05:23:05 by mouassit         ###   ########.fr       */
+/*   Updated: 2022/04/24 17:45:12 by mouassit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,10 @@
 
 int	main(void)
 {
-    Bureaucrat bureaucrat ("test", 140);
+    Bureaucrat bureaucrat ("test", 120);
     ShrubberyCreationForm shrubbery("home");
-
-    try {
-        bureaucrat.executeForm(shrubbery);
-    }
-    catch (std::exception &e) {
-        std::cout << e.what() << std::endl;
-    }
+    shrubbery.beSigned(bureaucrat);
+    bureaucrat.executeForm(shrubbery);
 
     return (0);
 }
