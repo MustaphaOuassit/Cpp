@@ -6,7 +6,7 @@
 /*   By: mouassit <mouassit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 22:26:44 by mouassit          #+#    #+#             */
-/*   Updated: 2022/04/22 02:37:46 by mouassit         ###   ########.fr       */
+/*   Updated: 2022/04/23 17:26:11 by mouassit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class Form
     public:
         Form(void);
         Form(Form const & copy);
-        Form(std::string name, int const signGrade, int const executeGrade);
+        Form(std::string const name, int const signGrade, int const executeGrade);
         Form &operator=(const Form &inst);
         ~Form(void);
         

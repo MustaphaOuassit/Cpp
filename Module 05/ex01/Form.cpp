@@ -6,7 +6,7 @@
 /*   By: mouassit <mouassit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 22:29:38 by mouassit          #+#    #+#             */
-/*   Updated: 2022/04/22 02:49:49 by mouassit         ###   ########.fr       */
+/*   Updated: 2022/04/24 05:21:11 by mouassit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 Form::Form(void): name(""), isSigned(false), signGrade(150), executeGrade(150)
 {
-    std::cout << "Default Form Constractor called" << std::endl;
+    std::cout << "Default Form Constructor called" << std::endl;
 }
 
 Form::Form(Form const & copy): name(""), isSigned(false), signGrade(150), executeGrade(150)
 {
-    std::cout << "Form Copy Constractor called" << std::endl;
+    std::cout << "Form Copy Constructor called" << std::endl;
     *this = copy;
 }
 Form::Form(std::string const name, int const signGrade, int const executeGrade)
 : name(name), isSigned(false), signGrade(signGrade), executeGrade(executeGrade)
 {
-    std::cout << "Form Arguments(name,signGrade,executeGrade) Constractor called" << std::endl;
+    std::cout << "Form Arguments(name,signGrade,executeGrade) Constructor called" << std::endl;
     if(signGrade < 1 || executeGrade < 1)
         throw Form::GradeTooHighException();
     if(signGrade > 150 || executeGrade > 150)
