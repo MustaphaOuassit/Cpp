@@ -6,7 +6,7 @@
 /*   By: mouassit <mouassit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 18:28:04 by mouassit          #+#    #+#             */
-/*   Updated: 2022/04/25 02:21:03 by mouassit         ###   ########.fr       */
+/*   Updated: 2022/04/25 02:31:33 by mouassit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,11 +51,6 @@ AForm* Intern::makePresidentialPardonForm(const std::string target)
     return (new PresidentialPardonForm(target));
 }
 
-const char *Intern::FormNotFoundException::what() const throw()
-{
-  return ("Form not found.");
-}
-
 AForm* Intern::makeForm(const std::string &form, const std::string &target)
 {
     AForm* (Intern::*funcPtr[3])(std::string const) = {
@@ -77,7 +72,6 @@ AForm* Intern::makeForm(const std::string &form, const std::string &target)
             return((this->*funcPtr[i])(target));
         }
     }
-    throw FormNotFoundException();
+    std::cout << "Form not found." << std::endl;
     return (NULL);
-    
 }
