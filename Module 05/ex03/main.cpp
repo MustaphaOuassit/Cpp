@@ -6,22 +6,21 @@
 /*   By: mouassit <mouassit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 22:25:53 by mouassit          #+#    #+#             */
-/*   Updated: 2022/04/24 17:45:12 by mouassit         ###   ########.fr       */
+/*   Updated: 2022/04/25 02:25:22 by mouassit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
 #include "AForm.hpp"
-#include "ShrubberyCreationForm.hpp"
-#include "RobotomyRequestForm.hpp"
+#include <iostream>
+#include "Bureaucrat.hpp"
 #include "PresidentialPardonForm.hpp"
-
-int	main(void)
+#include "RobotomyRequestForm.hpp"
+#include "ShrubberyCreationForm.hpp"
+#include "Intern.hpp"
+int main()
 {
-    Bureaucrat bureaucrat ("test", 120);
-    ShrubberyCreationForm shrubbery("home");
-    shrubbery.beSigned(bureaucrat);
-    bureaucrat.executeForm(shrubbery);
-
+    Intern someRandomIntern;
+    AForm* rrf;
+    rrf = someRandomIntern.makeForm("robotomy request", "Bender");
     return (0);
 }

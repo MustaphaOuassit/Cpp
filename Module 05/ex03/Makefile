@@ -6,7 +6,7 @@
 #    By: mouassit <mouassit@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/24 18:06:50 by mouassit          #+#    #+#              #
-#    Updated: 2022/04/24 18:09:40 by mouassit         ###   ########.fr        #
+#    Updated: 2022/04/25 01:28:52 by mouassit         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,8 @@ SRC =  main.cpp\
 	   AForm.cpp\
 	   ShrubberyCreationForm.cpp\
 	   RobotomyRequestForm.cpp\
-	   PresidentialPardonForm.cpp
+	   PresidentialPardonForm.cpp\
+	   Intern.cpp
 
 all : $(NAME)
 
