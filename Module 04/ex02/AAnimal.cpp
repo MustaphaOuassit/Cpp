@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AAnimal.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mustapha <mustapha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mouassit <mouassit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 14:11:04 by mustapha          #+#    #+#             */
-/*   Updated: 2022/04/14 14:11:53 by mustapha         ###   ########.fr       */
+/*   Updated: 2022/04/27 00:25:41 by mouassit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 AAnimal::AAnimal(void): type("AAnimal")
 {
-    std::cout << "AAnimal Constractor called" << std::endl;
+    std::cout << "AAnimal Constructor called" << std::endl;
 }
 
 AAnimal::AAnimal(AAnimal const & copy)
 {
     *this = copy;
-    std::cout << "AAnimal Copy Constractor called" << std::endl;
+    std::cout << "AAnimal Copy Constructor called" << std::endl;
 }
 
 AAnimal::AAnimal(std::string const & type): type(type)
 {
-    std::cout << "AAnimal type Constractor called" << std::endl;
+    std::cout << "AAnimal type Constructor called" << std::endl;
 }
 
 AAnimal &AAnimal::operator=(const AAnimal &inst) {

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mustapha <mustapha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mouassit <mouassit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 12:56:51 by mustapha          #+#    #+#             */
-/*   Updated: 2022/04/14 13:29:35 by mustapha         ###   ########.fr       */
+/*   Updated: 2022/04/27 00:25:41 by mouassit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 Brain::Brain(void)
 {
-    std::cout << "Brain Constractor called" << std::endl;
+    std::cout << "Brain Constructor called" << std::endl;
 }
 
 Brain::Brain(Brain const & copy)
 {
     *this = copy;
-    std::cout << "Brain Copy Constractor called" << std::endl;
+    std::cout << "Brain Copy Constructor called" << std::endl;
 }
 
 Brain &Brain::operator=(const Brain &inst) {
