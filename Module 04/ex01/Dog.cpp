@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mustapha <mustapha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mouassit <mouassit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 00:16:34 by mustapha          #+#    #+#             */
-/*   Updated: 2022/04/14 13:49:18 by mustapha         ###   ########.fr       */
+/*   Updated: 2022/04/27 00:25:41 by mouassit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 Dog::Dog(void) : Animal("Dog")
 {
-    std::cout << "Dog Constractor called" << std::endl;
+    std::cout << "Dog Constructor called" << std::endl;
     this->brain = new Brain();
 }
 
 Dog::Dog(Dog const & copy)
 {
     *this = copy;
-    std::cout << "Dog Copy Constractor called" << std::endl;
+    std::cout << "Dog Copy Constructor called" << std::endl;
 }
 
 Dog &Dog::operator=(const Dog &inst) {

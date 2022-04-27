@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mustapha <mustapha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mouassit <mouassit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 01:38:00 by mustapha          #+#    #+#             */
-/*   Updated: 2022/04/14 02:37:16 by mustapha         ###   ########.fr       */
+/*   Updated: 2022/04/27 00:25:41 by mouassit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 WrongAnimal::WrongAnimal(void): type("WrongAnimal")
 {
-    std::cout << "WrongAnimal Constractor called" << std::endl;
+    std::cout << "WrongAnimal Constructor called" << std::endl;
 }
 
 WrongAnimal::WrongAnimal(WrongAnimal const & copy)
 {
     *this = copy;
-    std::cout << "WrongAnimal Copy Constractor called" << std::endl;
+    std::cout << "WrongAnimal Copy Constructor called" << std::endl;
 }
 
 WrongAnimal::WrongAnimal(std::string const & type): type(type)
 {
-    std::cout << "WrongAnimal type Constractor called" << std::endl;
+    std::cout << "WrongAnimal type Constructor called" << std::endl;
 }
 
 WrongAnimal &WrongAnimal::operator=(const WrongAnimal &inst) {
