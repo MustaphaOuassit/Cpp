@@ -6,7 +6,7 @@
 /*   By: mouassit <mouassit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/29 00:41:47 by mouassit          #+#    #+#             */
-/*   Updated: 2022/04/29 00:44:00 by mouassit         ###   ########.fr       */
+/*   Updated: 2022/04/30 09:15:56 by mouassit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,8 +61,8 @@ void    printFloat(std::string str)
     else
         std::cout << "char: " << "impossible" << std::endl;
     std::cout << "int: " << static_cast<int>(number)<< std::endl;
-    std::cout << "float: " << number << ".0f" << std::endl;
-    std::cout << "double: " << number << ".0" << std::endl;
+    std::cout << "float: " << number << "f" << std::endl;
+    std::cout << "double: " << number << std::endl;
 }
 
 void    printDouble(std::string str)
@@ -87,6 +87,6 @@ void    printDouble(std::string str)
     else
         std::cout << "char: " << "impossible" << std::endl;
     std::cout << "int: " << static_cast<int>(number) << std::endl;
-    std::cout << "float: " << static_cast<float>(number) << ".0f" << std::endl;
-    std::cout << "double: " << number << ".0" << std::endl;
+    std::cout << "float: " << static_cast<float>(number) << "f" << std::endl;
+    std::cout << "double: " << number << std::endl;
 }
